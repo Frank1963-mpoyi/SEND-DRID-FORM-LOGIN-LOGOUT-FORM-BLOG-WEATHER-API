@@ -15,5 +15,8 @@ class Description(models.Model):
     # will fix the data in descending order
     class Meta:
         ordering = ["-created_on"]
+        
+    def __str__(self):
+        return str(self.created_on)
 
 # py manage.py makemigrations weather_api
