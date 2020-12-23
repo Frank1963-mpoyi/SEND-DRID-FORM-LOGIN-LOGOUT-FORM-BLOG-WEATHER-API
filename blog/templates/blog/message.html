@@ -1,0 +1,16 @@
+
+{% block content %}
+<style>
+    .message{
+        color: #fff;
+        margin-bottom: 2px;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<p class="message">Welcome to my awesome Blog {{request.user}}</p>
+{% else %}
+<p class="message">Welcome to my awesome Blog</p>
+{% endif %}
+
+{% endblock content %}
